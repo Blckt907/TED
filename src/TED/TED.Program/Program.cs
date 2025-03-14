@@ -39,6 +39,9 @@ namespace TED.Program
             var lightImagePath = GetArgument(args, new string[] { "-lightimage", "-li" }, Options.Default.LightImagePath);
             var alignment = GetArgument(args, new string[] { "-align", "-a" }, "left");
             var lines = Options.Default.Lines;
+            var textColor = GetArgument(args, new string[] { "-textcolor", "-c" }, Options.Default.TextColor);
+            var darkTextColor = GetArgument(args, new string[] { "-darktextcolor", "-dc" }, Options.Default.DarkTextColor);
+            var lightTextColor = GetArgument(args, new string[] { "-lighttextcolor", "-lc" }, Options.Default.LightTextColor);
 
             if (!bool.TryParse(GetArgument(args, new string[] { "-debug", "-d" }, Options.Default.Debug.ToString()), out bool debug))
             {
@@ -122,6 +125,9 @@ namespace TED.Program
                 imagePath,
                 lightImagePath,
                 darkImagePath,
+                textColor,
+                darkTextColor,
+                lightTextColor,
                 lines,
                 fixedWidth,
                 alignmentOption,
