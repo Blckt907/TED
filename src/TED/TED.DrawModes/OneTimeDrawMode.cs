@@ -37,8 +37,12 @@ namespace TED.DrawModes
                     // Get the path of the image based on the luminance of the wallpaper
                     var imagePath = Options.GetImagePath(wallpaperLuminance);
 
+                    // Convert string to Color object
+                    ///var textColor = Color.FromHtml(Options.TextColor);
+                    //var darkTextColor = ColorTranslator.FromHtml
+
                     // Set the text color based on the luminance of the wallpaper
-                    var textColor = wallpaperLuminance > 0.5 ? Color.Black : Color.White;
+                    var textColor = wallpaperLuminance > 0.5 ? ColorTranslator.FromHtml(Options.DarkTextColor) : ColorTranslator.FromHtml(Options.LightTextColor);
 
                     using (var font = new Font(Options.FontName, Options.FontSize, FontStyle.Bold))
                     {

@@ -17,6 +17,9 @@ namespace TED.Program
         internal readonly string ImagePath;
         internal readonly string LightImagePath;
         internal readonly string DarkImagePath;
+        internal readonly string TextColor;
+		internal readonly string DarkTextColor;
+        internal readonly string LightTextColor;
         internal readonly List<string> Lines;
         internal int FixedWidth;
         internal StringAlignment TextAlignment;
@@ -33,7 +36,7 @@ namespace TED.Program
             {
                 _default ??= new Options(
                         10, 10, 8, 8, "Arial",
-                        "", "", "",
+                        "", "", "","#000000","#ffffff","#000000",
                         new List<string>()
                         {
                          Tokenizer.ReplaceTokens("USERNAME: @userName"),
@@ -54,7 +57,7 @@ namespace TED.Program
         internal Options(int paddingHorizontal, int paddingVertical,
             int lineSpacing, int fontSize, string fontName,
             string imagePath, string lightImagePath,
-            string darkImagePath, List<string> lines, int fixedWidth, StringAlignment textAlignment,
+            string darkImagePath, string textColor, string lightTextColor, string darkTextColor, List<string> lines, int fixedWidth, StringAlignment textAlignment,
             bool debug)
         {
             PaddingHorizontal = paddingHorizontal;
@@ -65,6 +68,9 @@ namespace TED.Program
             ImagePath = imagePath;
             LightImagePath = lightImagePath;
             DarkImagePath = darkImagePath;
+            TextColor = textColor;
+            DarkTextColor = darkTextColor;
+            LightTextColor = lightTextColor;
             Lines = lines;
             Debug = debug;
             FixedWidth = fixedWidth;
