@@ -43,8 +43,8 @@ TED supports the following switches:
 - `-f` or `-font`: Name of the font to use. Default is **Arial**.
 - `-fs` or `-fontsize`: Font size in pixels. Default is **8**.
 - `-ls` or `-linespacing`: Space between text lines in pixels. Default is **8**.
-- `-dc` or `-darkTextColor`: Ñhange text color when the perceived desktop luminance is light. Accepted HTML color codes. Default **#FFFFFF**
-- `-lc` or `-lightTextColor`: Ñhange text color when the perceived desktop luminance is dark. Accepted HTML color codes. Default **#000000**
+- `-dc` or `-darkTextColor`: Change text color when the perceived desktop luminance is light. Accepted HTML color codes. Default **#FFFFFF**
+- `-lc` or `-lightTextColor`: Change text color when the perceived desktop luminance is dark. Accepted HTML color codes. Default **#000000**
 - `-hp` or `-hpad`: Horizontal padding amount in pixels. Default is **10**.
 - `-vp` or `-vpad`: Vertical padding amount in pixels. Default is **10**.
 - `-w` or `-width`: The width of the image when drawn, in pixels. By default this is **-1**. 
